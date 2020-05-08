@@ -20,10 +20,10 @@ class WeatherController extends Controller
         // проверка данных
     	$request->validate([
 
-    						'name' => 'required|max:255|',
-    						'email' => 'required|max:100|email',
+    			     'name' => 'required|max:255|',
+    				 'email' => 'required|max:100|email',
 
-    						]);
+ 				]);
     	 
     	$name = $request->input('name');
     	$email = $request->input('email');
@@ -32,9 +32,9 @@ class WeatherController extends Controller
     	$weather = $this->getWeather();
     	$date = date('G : i : s');
     	$data = [
-    				'weather' => $weather, 
-    				'date' => $date,
-    				'name' => $name
+    			'weather' => $weather, 
+    			'date' => $date,
+    			'name' => $name
     			];
 
     	// отправка писмо пользователью 
